@@ -1,68 +1,28 @@
 const structAdresse = `{
-    "id": "ADRESSE",
-    "data": {
-      "ligne1": {
-        "type": "STRING"
-      },
-      "ligne2": {
-        "type": "STRING"
-      },
-      "ligne3": {
-        "type": "STRING"
-      },
-      "ligne4": {
-        "type": "STRING"
-      },
-      "ligne5": {
-        "type": "STRING"
-      },
-      "ligne6": {
-        "type": "STRING"
-      },
-      "ligne7": {
-        "type": "STRING"
-      },
-    }
+    "id": ADRESSE,
+    "lignes": [string, string, string, string, string, string, string]
 }`
 
 const stuctDestinataire = `{
-    "id": "DESTINATAIRE",
-    "data": {
-        "nom": {
-          "type": "STRING"
-        },
-        "prenom": {
-          "type": "STRING"
-        },
-        "dateDeNaissance": {
-          "type": "DATE"
-          "format":
-        }
-        "age": {
-          "type": "NUMBER"
-        }
-        "adresse" {
-          "type": "STRUCT",
-          "id": "ADRESSE"
-        }
-    }
+    "id": DESTINATAIRE,
+    "nom": string,
+    "prenom": string,
+    "dateDeNaissance": date
+    "age": number
+    "adresse": ADRESSE
 }`
 
 const adresse = `{
-    "ligne1" : "Jerome Biringer",
-    "ligne2": "6 impasse des grands bois",
-    "ligne3": "79000 SCIECQ"
+    "lignes" : ["Jerome Biringer", "6 impasse des grands bois", "79000 SCIECQ", "", "", "", ""]
 }`
 
-const destinataire = ` {
+const destinataire = `{
   "nom": "BIRINGER",
   "prenom": "Jerome",
-  "dateDeNaissance": "26/10/1979",
+  "dateDeNaissance": "1979-10-26",
   "age": 43,
   "adresse": {
-    "ligne1" : "Jerome Biringer",
-    "ligne2": "6 impasse des grands bois",
-    "ligne3": "79000 SCIECQ"
+    "lignes" : ["Jerome Biringer", "6 impasse des grands bois", "79000 SCIECQ", "", "", "", ""]
   }
 }
 `
