@@ -30,96 +30,28 @@ const destinataire = `{
 const blocAdresse = `{
   "id": "ADRESSE_DEST",
   "type": CONTENT_BLOCK
-  "dataInId": "ADRESSE",
-  "childs": [
+  "data": {
+    "adresse": "ADRESSE"
+  },
+  "content": [
     {
+      "type": "REPEATER"
       "tag": "div",
-      "htmlId": "adresseDestinataire",
-      "classes": []
-      "childs": [
+      "properties" : { "id": "adresseDestinataire" }
+      "data": {
+        "lignes": adresse
+      }
+      "content": [
         {
           "type": "HTML_ELEMENT",  
-          "tag": "p",
           "properties": {},
-          "childs": [
+          "tag": "p"
+          "content": [
             {
-              "type": "DATA_MAPPER",
-              "dataMapped": "ligne1"
-            },
-          ]
-        },
-        {
-          "type": "HTML_ELEMENT",  
-          "tag": "p",
-          "properties": {},
-          "childs": [
-            {
-              "type": "DataMapper",
-              "dataMapped": "ligne2"
-            },
-          ]
-        },
-        {
-          "type": "HTML_ELEMENT",  
-          "tag": "p",
-          "htmlId": undefined,
-          "classes": []
-          "childs": [
-            {
-              "type": "DataMapper",
-              "dataMapped": "ligne3"
-            },
-          ]
-        },
-        {
-          "type": "HTML_ELEMENT",  
-          "tag": "p",
-          "htmlId": undefined,
-          "classes": []
-          "childs": [
-            {
-              "type": "DataMapper",
-              "dataMapped": "ligne4"
-            },
-          ]
-        },
-        {
-          "type": "HTML_ELEMENT",  
-          "tag": "p",
-          "htmlId": undefined,
-          "classes": []
-          "childs": [
-            {
-              "type": "DataMapper",
-              "dataMapped": "ligne5"
-            },
-          ]
-        },
-        {
-          "type": "HTML_ELEMENT",  
-          "tag": "p",
-          "htmlId": undefined,
-          "classes": []
-          "childs": [
-            {
-              "type": "DataMapper",
-              "dataMapped": "ligne6"
-            },
-          ]
-        },
-        {
-          "type": "HTML_ELEMENT",  
-          "tag": "p",
-          "htmlId": undefined,
-          "classes": []
-          "childs": [
-            {
-              "type": "DataMapper",
-              "dataMapped": "ligne7"
+              "type": "TEXT_NODE",
+              "content": "${lignes.value}"
             },
           ]
         }
       ]
-    }
-  ]
 }`
